@@ -12,3 +12,11 @@ def add_item(list_b):
     list_b.append(item)
     save_list(list_b)
     return list_b
+
+choice = input("Would you like to do anything else with your list?")
+if choice == 'add':
+    add_item(to_do_list)
+elif choice == 'show list':
+    print(to_do_list)
+else:
+    pass
