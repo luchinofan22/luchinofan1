@@ -8,14 +8,22 @@ def save_list(your_list_here):
     return to_do_list == your_list_here
 
 def add_item(list_b):
-    item = input("What item would you like to add to your to-do list?")
+    item = input("What item would you like to add to your to-do list? ")
     list_b.append(item)
     save_list(list_b)
     return list_b
 
-choice = input("Would you like to do anything else with your list?")
+def remove_item(same_list):
+    item = input("What would you like to remove from your list? ")
+    same_list.remove(item)
+    return same_list
+
+choice = input("Would you like to do anything else with your list? ")
 if choice == 'add':
     add_item(to_do_list)
+    print(f"New list: {to_do_list}")
+elif choice == 'remove':
+    q
 elif choice == 'show list':
     print(to_do_list)
 else:
